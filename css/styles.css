@@ -1,0 +1,13 @@
+.merr{
+ background-color: blue;
+}
+.fit-image{
+width: 100%;
+object-fit: cover;
+height: 300px; /* only if you want fixed height */
+}
+
+p{
+ color:red;
+ font-family: Perpetua, serif;
+}
