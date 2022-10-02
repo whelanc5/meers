@@ -71,19 +71,21 @@
 
 //load_home();
 function load_content(content) {
-	if(!content)
+	console.log(content);
+	if(context.length<1)
 		content="index";
 	var xhr= new XMLHttpRequest();
 		xhr.open('GET', content+'.html', true);
 		xhr.onreadystatechange= function() {
 			if (this.readyState!==4)
-			document.getElementById('content').innerHTML= this.responseText;
+			
 			return;
 			if (this.status!==200) return; // or whatever error handling you want
 				document.getElementById('content').innerHTML= this.responseText;
 	}
 		xhr.send();
 }
+
 load_content(window.location.pathname);
 </script>
 
