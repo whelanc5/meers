@@ -11,3 +11,8 @@ p{
  color:red;
  font-family: Perpetua, serif;
 }
+
+#nav-placeholder .navbar{
+   width: 100%; //fallback
+   width: 100vw;
+}
