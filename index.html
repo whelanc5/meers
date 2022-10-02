@@ -14,50 +14,77 @@
 <body>
 
 <div class="container-fluid p-5 text-center">
+	<div class="row">
+		<div id="sidebar"  class="col-sm-2 col-md-2">
+			<div class="sidebar-header">
+				<h3>Meera Mittal</h3>
+			</div>
 
-<div id="nav-placeholder" class="col-sm-2 col-md-2" >
-</div>
-  <h3>Meera's art page</h3>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-  
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3 class="" >Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
-</div>
+			<ul class="list-unstyled components">
+				<p></p>
+				<li class="active">
+					<a href="index.html" >Home</a>
+				</li>
+						
+				<li class="active">
+					<a href="index.html" >Prints</a>
+				</li>
+						
+				<li class="active">
+					<a href="index.html" >Books</a>
+				</li>
+						
+				<li class="active">
+					<a href="index.html" >Zines</a>
+				</li>
+						
+				</ul>
 
+				<ul class="list-unstyled components">
+					<li>
+						<a href="#">Other</a>
+					</li>
 
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="gallery.html">Gallery</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+				
+		
+
+		<div id="context" >
+		  
+		</div>
+	</div>
+
+</div>
 </body>
 </html>
 <script>
-function load_home() {
 
-var xhr= new XMLHttpRequest();
-	xhr.open('GET', 'nav.html', true);
-	xhr.onreadystatechange= function() {
-		if (this.readyState!==4) return;
-		if (this.status!==200) return; // or whatever error handling you want
-			document.getElementById('nav-placeholder').innerHTML= this.responseText;
-			console.log("sideBarNav.html");
+//load_home();
+function load_content(content) {
+	if(!content)
+		content="index";
+	var xhr= new XMLHttpRequest();
+		xhr.open('GET', content+'.html', true);
+		xhr.onreadystatechange= function() {
+			if (this.readyState!==4)
+			document.getElementById('content').innerHTML= this.responseText;
+			return;
+			if (this.status!==200) return; // or whatever error handling you want
+				document.getElementById('content').innerHTML= this.responseText;
 	}
-	xhr.send();
+		xhr.send();
 }
-load_home();
+
 </script>
 
 </html>
