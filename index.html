@@ -43,11 +43,8 @@ function load_content(content, placeholder) {
 }
 load_content("nav.html","nav-placeholder");
 
-var parts = window.location.pathname.split("/");
-var last = parts[parts.length-1];
-if(last.length<2)
-	last = "index";
-content = window.location.host+"/content/"+last+".html";
+
+content = window.location.pathname+"_content.html";
 load_content(content,"content-placeholder");
 </script>
 
