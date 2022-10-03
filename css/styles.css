@@ -22,9 +22,24 @@ p{
   height: 100%;
 }
 
-#nav {
-  position:fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
 }
