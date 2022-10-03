@@ -13,16 +13,18 @@ p{
 }
 
 #nav-placeholder .navbar{
-   width: 100%; //fallback
-   width: 100vw;
-}
-
-#nav {
   position:fixed;
   width: 200px;
   z-index: 1000;
   left: 0;
   top: 0;
   border-right: 1px solid #162636;
+  height: 100%;
+}
+
+#nav {
+  position:fixed;
+  left: 0;
+  top: 0;
   height: 100%;
 }
