@@ -15,79 +15,40 @@
 
 <div class="container-fluid p-5 text-center">
 	<div class="row">
-		<div id="sidebar"  class="col-sm-2 col-md-2">
-			<div class="sidebar-header">
-				<h3>Meera Mittal</h3>
-			</div>
+		<div id="nav-placeholder" class="col-sm-2 col-md-2" >
 
-			<ul class="list-unstyled components">
-				<p></p>
-				<li class="active">
-					<a href="index.html" >Home</a>
-				</li>
-						
-				<li class="active">
-					<a href="index.html" >Prints</a>
-				</li>
-						
-				<li class="active">
-					<a href="index.html" >Books</a>
-				</li>
-						
-				<li class="active">
-					<a href="index.html" >Zines</a>
-				</li>
-						
-				</ul>
-
-				<ul class="list-unstyled components">
-					<li>
-						<a href="#">Other</a>
-					</li>
-
-					<li>
-						<a href="#">About</a>
-					</li>
-					<li>
-						<a href="gallery" >Gallery</a>
-					</li>
-					<li>
-						<a href="#">Contact</a>
-					</li>
-				</ul>
-			</div>
 				
+		</div>
 		
 
-		<div id="context" >
+		<div class="content-placeholder">
 		  
 		</div>
-	</div>
-
-</div>
+	
+<	/div>
 </body>
 </html>
 <script>
+function load_content(content, placeholder) {
 
-//load_home();
-function load_content(content) {
-	console.log(content);
-	if(context.length<1)
-		content="index";
 	var xhr= new XMLHttpRequest();
-		xhr.open('GET', content+'.html', true);
+		xhr.open('GET', content, true);
 		xhr.onreadystatechange= function() {
-			if (this.readyState!==4)
-			
-			return;
+			if (this.readyState!==4) return;
 			if (this.status!==200) return; // or whatever error handling you want
-				document.getElementById('content').innerHTML= this.responseText;
+				document.getElementById(placeholder).innerHTML= this.responseText;
+				console.log("sideBarNav.html");
 	}
-		xhr.send();
+	xhr.send();
 }
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('myParam');
-load_content(window.location.pathname);
+load_content("nav.html","nav-placeholder");
+
+var parts = window.location.pathname.split("/");
+var last = parts[parts.length-1];
+if(last.length<1)
+	last = "index";
+content = "content/"+last+.html;
+load_content(last,"content-placeholder");
 </script>
 
 </html>
