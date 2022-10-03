@@ -37,7 +37,6 @@ function load_content(content, placeholder) {
 			if (this.readyState!==4) return;
 			if (this.status!==200) return; // or whatever error handling you want
 				document.getElementById(placeholder).innerHTML= this.responseText;
-				console.log("sideBarNav.html");
 	}
 	xhr.send();
 }
@@ -45,9 +44,9 @@ load_content("nav.html","nav-placeholder");
 
 var parts = window.location.pathname.split("/");
 var last = parts[parts.length-1];
-if(last.length<1)
+if(last.length<2)
 	last = "index";
-content = "content/"+last+.html;
+content = "content/"+last+".html";
 load_content(last,"content-placeholder");
 </script>
 
