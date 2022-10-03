@@ -25,12 +25,13 @@
 		  
 		</div>
 	
-<	/div>
+	</div>
+</div>
 </body>
 </html>
 <script>
 function load_content(content, placeholder) {
-
+	console.log(content);
 	var xhr= new XMLHttpRequest();
 		xhr.open('GET', content, true);
 		xhr.onreadystatechange= function() {
