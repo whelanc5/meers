@@ -8,28 +8,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
-
-
 <body>
-		<div class="wrapper">
-			<nav id="nav-placeholder" class="col-sm-2 col-md-2" >
-
-							
-					</nav>
-			<div class="container-fluid p-5 text-center">
+<div class="wrapper h-100">
+			<div id="nav-placeholder"></div>
+			<div id="content-placeholder"></div>
 				
-				<div class="row">
-					
-					
-
-					<div id="content-placeholder">
-					  
-					</div>
-				
-				</div>
-			</div>
-		</div>
+			
+</div>
 </body>
 </html>
 <script>
@@ -44,15 +29,10 @@ function load_content(content, placeholder) {
 	}
 	xhr.send();
 }
-load_content("nav.html","nav-placeholder");
+window.onload = function(e){ 
+	load_content("nav.html","nav-placeholder");
+	load_content("index_content.html","content-placeholder");
+}
 
-var parts = window.location.pathname.split("/");
-var last = parts[parts.length-1];
-if(last.length<2)
-	last = "index";
-content = last+"_content.html";
-load_content(content,"content-placeholder");
 
 </script>
-
-</html>

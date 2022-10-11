@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="page-placeholder">
+<div class="wrapper">
+			<div id="nav-placeholder"></div>
+			<div id="content-placeholder"></div>
+				
+			
+</div>
 </div>
 </body>
 </html>
@@ -25,7 +30,10 @@ function load_content(content, placeholder) {
 	}
 	xhr.send();
 }
-load_content("content.html","page-placeholder");
-load_content("nav.html","nav-placeholder");
-load_content("gallery_content.html","content-placeholder");
+window.onload = function(e){ 
+	load_content("nav.html","nav-placeholder");
+	load_content("gallery_content.html","content-placeholder");
+}
+
+
 </script>
