@@ -26,6 +26,7 @@ function load_content(content, placeholder) {
 	xhr.send();
 }
 load_content("content.html","page-placeholder");
+load_content("nav.html","nav-placeholder");
 var parts = window.location.pathname.split("/");
 var last = parts[parts.length-1];
 if(last.length<2)
