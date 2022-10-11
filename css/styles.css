@@ -14,7 +14,6 @@ p{
 
 #nav-placeholder .navbar{
   position:fixed;
-  width: 200px;
   z-index: 1000;
   left: 0;
   top: 0;
@@ -30,7 +29,7 @@ p{
 
 #sidebar {
     width: 250px;
-    position: fixed;
+    
     top: 0;
     left: 0;
     height: 100vh;
@@ -40,3 +39,10 @@ p{
     transition: all 0.3s;
 }
 
+@media screen and (max-width: 700px) {
+  #sidebar {
+    display: none;
+  }
+  #sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
