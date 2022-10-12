@@ -1,3 +1,6 @@
+
+
+
 .merr{
  background-color: blue;
 }
@@ -16,7 +19,7 @@ p{
 
 
 .wrapper {
-    display: flex;
+    display: block;
 	margin-left:250px;
 	height:100%;
 }
@@ -33,10 +36,64 @@ p{
     transition: all 0.3s;
 }
 
-@media screen and (max-width: 900px) {
-  #sidebar {
+
+
+.navButton{
     display: none;
   }
-  #sidebar a {float: left;}
+
+
+/* The Modal (background) */
+.modal {
+  margin-left:100px;
+  display: none; /* Hidden by default */
+  z-index: 1; /* Sit on top */ 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .navButton{display:block;
+  width:100%}
+  
+  #sidebar {
+    display: none;
+	width:100%;
+	text-align:center;
+  }
+  .modal{
+	margin-left:0;
+  }
+ 
+  
   .wrapper {margin-left: 0;}
+}
+
+@media screen and (min-width: 900px) {
+  .navButton{display:none}
+  #sidebar {
+    display:block;
+  }
 }

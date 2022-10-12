@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div class="wrapper h-100">
+<div class="wrapper">
 			<div id="nav-placeholder"></div>
 			<div id="content-placeholder"></div>
 				
@@ -17,22 +17,10 @@
 </div>
 </body>
 </html>
+<script src="script/meerscript.js" type="text/javascript"> </script>
 <script>
-function load_content(content, placeholder) {
-	console.log(content);
-	var xhr= new XMLHttpRequest();
-		xhr.open('GET', content, true);
-		xhr.onreadystatechange= function() {
-			if (this.readyState!==4) return;
-			if (this.status!==200) return; // or whatever error handling you want
-				document.getElementById(placeholder).innerHTML= this.responseText;
-	}
-	xhr.send();
-}
 window.onload = function(e){ 
 	load_content("nav.html","nav-placeholder");
 	load_content("index_content.html","content-placeholder");
 }
-
-
 </script>
