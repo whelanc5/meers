@@ -41,9 +41,13 @@ function setModal(){
 		
 	
 }
-function showModal() {
+function showModal(e) {
 	
   console.log("modal");
+  document.getElementById("modalTitle").innerText = e.target.dataset.title;
+  
+  console.log(document.getElementById("modalTitle"));
+  document.getElementById("modalImage").src = e.target.dataset.file;
   let modal = document.getElementById("merrModal");
   modal.style.display = "block";
 }
