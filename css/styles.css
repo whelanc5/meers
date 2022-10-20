@@ -97,10 +97,28 @@
 		text-align:center;
 	}
 	
+	.headingRow{
+		text-align:center;
+	}
+	
+	.carouselImage{
+		display: flex;
+		width:100%!important;
+		 
+		
+	}
+	.carousel-inner{
+		height:100%;
+		display: flex;		
+	}
+	
 	#meerCarousel{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top:50%;
+		margin-bottom:50%;
+		height:600px;
 	}
 	
 	.thumbnails{
@@ -110,14 +128,14 @@
 	.wrapper {
 		margin-left: 0;
 		position: absolute;
-		top: 40px; /* Header Height */
+		top: 0px; /* Header Height */
 		bottom: 20px; /* Footer Height */
 	}
 	
-	.wrapper,.content{
+	.content{
 		margin-left: 0;
 		position: absolute;
-		top: 40px; /* Header Height */
+		top: 20px; /* Header Height */
 		bottom: 20px; /* Footer Height */
 	}
 	
