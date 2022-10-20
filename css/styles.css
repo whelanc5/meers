@@ -19,21 +19,39 @@
 	width:100%;
 }
 
-#sidebar {
-    width: 250px;
+
+
+#sidebar, .mobile-header  {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     z-index: 999;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
 }
 
+#sidebar  {
+    width: 250px;    
+    left: 0;
+	height: 100vh;
+    
+}
+
+.mobile-header{
+	display:none;
+    height: 40px;
+	width:100%;
+	text-align:center;
+	}
+
 .navButton{
     display: none;
   }
+  
+#mobileNav{
+	text-align:center;
+}
 
 
 /* The Modal (background) */
@@ -91,6 +109,15 @@
 		width:100%
 	}
 	
+	
+	
+	.mobile-header{
+		display:block;
+		
+		
+			
+	}
+	
 	#sidebar {
 		display: none;
 		width:100%;
@@ -115,9 +142,7 @@
 	#meerCarousel{
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		margin-top:50%;
-		margin-bottom:50%;
+		align-items: center;		
 		height:600px;
 	}
 	
@@ -127,14 +152,14 @@
   
 	.wrapper {
 		margin-left: 0;
-		position: absolute;
+		
 		top: 0px; /* Header Height */
 		bottom: 20px; /* Footer Height */
 	}
 	
 	.content{
-		margin-left: 0;
-		position: absolute;
+		margin: 0;	
+		width:100%	
 		top: 20px; /* Header Height */
 		bottom: 20px; /* Footer Height */
 	}

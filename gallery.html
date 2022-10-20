@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body >
-
+<div class="mobile-header">
+						<h3>Meera Mittal</h3>
+					</div>
 
 <div class="wrapper">
 			<div id="nav-placeholder"></div>
 			<div id="content-placeholder"></div>
+			<div id="bottom-nav-placeholder"></div>
 				
 			
 </div>
@@ -26,8 +29,7 @@
 window.onload = function(e){ 
 	load_content("gallery_content.html","content-placeholder", setModal);
 	load_content("nav.html","nav-placeholder");
-	
-	
+	load_content("mobileNav.html","bottom-nav-placeholder");	
 }
 
 
