@@ -12,7 +12,7 @@
 <div class="wrapper">
 			<div id="nav-placeholder"></div>
 			<div id="content-placeholder"></div>
-			<div id="bottom-nav-placeholder"></div>
+			<div id="bottom-nav-placeholder" class="mobileNav"></div>
 				
 			
 </div>
@@ -21,8 +21,6 @@
 <script src="script/meerscript.js" type="text/javascript"> </script>
 <script>
 window.onload = function(e){ 
-	load_content("nav.html","nav-placeholder");
-	load_content("index_content.html","content-placeholder");
-	load_content("mobileNav.html","bottom-nav-placeholder");
+	load_content("index_content.html","content-placeholder", setModal);
 }
 </script>

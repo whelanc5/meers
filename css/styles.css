@@ -14,6 +14,7 @@
 
 .wrapper {
     display: block;
+	
 	margin-left:250px;
 	height:100%;
 	width:100%;
@@ -21,37 +22,32 @@
 
 
 
-#sidebar, .mobile-header  {
+#sidebar  {
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 999;
+    left: 0;   
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
-}
-
-#sidebar  {
-    width: 250px;    
+	z-index: 1000; /* Sit on top */ 
+	width: 250px;    
     left: 0;
 	height: 100vh;
-    
 }
 
-.mobile-header{
-	display:none;
-    height: 40px;
-	width:100%;
-	text-align:center;
-	}
+
 
 .navButton{
     display: none;
   }
   
-#mobileNav{
+.mobileNav{
 	text-align:center;
 }
+
+.mobileNav a:link, .mobileNav a:visited{
+		color:blue;
+	}
 
 
 /* The Modal (background) */
@@ -61,9 +57,9 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	display: none; /* Hidden by default */
-	z-index: 1000; /* Sit on top */ 
-	
+	z-index: 1000; /* Sit on top */ 	
 }
+
 #modalImage{
 	min-height:300px;
 	max-height:1000px;
@@ -71,8 +67,7 @@
 }
 
 .modal-content {
-	color:black;
-	
+	color:black;	
 	padding: 20px;  
 	border: 1px solid #888;
 }
@@ -83,10 +78,11 @@
 }
 
 .close {
-  color: #aaa;
-  float: left;
-  font-size: 28px;
-  font-weight: bold;
+	position:fixed;
+	color: #aaa;
+	top: 5px;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .modalbtn{
@@ -103,84 +99,67 @@
 	cursor: pointer;
 }
 
+#showNav, #hideNav{
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+}
+
+.sidebarContent a:link,.sidebarContent  a:visited{
+		color:white;
+		
+	}
+	
+
+
 @media screen and (max-width: 900px) {
-	.navButton{
-		display:block;
-		width:100%
-	}
-	
-	
-	
-	.mobile-header{
-		display:block;
-		
-		
-			
-	}
 	
 	#sidebar {
-		display: none;
+		height:40px;
 		width:100%;
 		text-align:center;
 	}
-	
 	.headingRow{
 		text-align:center;
 	}
 	
-	.carouselImage{
-		display: flex;
-		width:100%!important;
-		 
-		
-	}
-	.carousel-inner{
-		height:100%;
-		display: flex;		
+	#showNav{
+		display:block;
 	}
 	
-	#meerCarousel{
-		display: flex;
-		justify-content: center;
-		align-items: center;		
-		height:600px;
+	.merrModal {
+		left: 0%;
+		transform: translate(0%, -50%);
 	}
 	
-	.thumbnails{
-		display:none;
-	}
-  
+
 	.wrapper {
-		margin-left: 0;
-		
-		top: 0px; /* Header Height */
-		bottom: 20px; /* Footer Height */
+		margin-left: 0;		
+		margin-top:40px;	
 	}
 	
-	.content{
-		margin: 0;	
-		width:100%	
-		top: 20px; /* Header Height */
-		bottom: 20px; /* Footer Height */
+	.content{	
+		margin:auto;	
+		width:100%;		
+	}
+	
+	.sidebarContent{
+		display:none;
+		
+
 	}
 	
 }
 
 @media screen and (min-width: 900px) {
-	.navButton{
+	.mobileNav{
 		display:none
 	}
 	#sidebar {
 		display:block;
 	}
-}
-
-.Main-Div {
-    position: relative;
-    left: -9999px;
-}
-
-.Inner-Div {
-    position: relative;
-    left: 9999px;
+	.sidebarContent, .sidebar-header{
+		margin-left:2px;
+	}
 }
