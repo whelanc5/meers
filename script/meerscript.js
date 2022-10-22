@@ -88,8 +88,8 @@ function setModal(){
 }
 function showModal(e) {
   
-  document.getElementById("modalImage").src = e.target.dataset.file ? e.target.dataset.file :"images/turtle.jpg";
-  document.getElementById("modalTitle").innerText = e.target.dataset.title ? e.target.dataset.title : "Not Found"; 
+  document.getElementById("modalImage").src = e.target.src ? e.target.src :"images/turtle.jpg";
+  //document.getElementById("modalTitle").innerText = e.target.dataset.title ? e.target.dataset.title : "Not Found"; 
   document.getElementById("modalDescription").innerText = e.target.dataset.description ? e.target.dataset.description : "";  
   let modal = document.getElementById("merrModal");
   modal.style.display = "block";
