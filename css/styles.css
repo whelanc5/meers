@@ -2,6 +2,11 @@
 	background-color: blue;
 }
 
+*{
+    font-family:Book Antiqua;
+}
+
+
 .fit-image{
 	width: 100%;
 	object-fit: cover;
@@ -88,8 +93,8 @@
 
 .modalbtn{
 	cursor: pointer;
-
 }
+
 #meerCarousel{
 	display:none;
 }
@@ -111,6 +116,7 @@
 		color:white;
 		
 	}
+	
 	
 
 
@@ -135,6 +141,7 @@
 	.merrModal {
 		left: 0%;
 		transform: translate(0%, -50%);
+		width:100%;
 		
 	}
 	
