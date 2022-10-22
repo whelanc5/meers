@@ -1,18 +1,166 @@
 .merr{
- background-color: blue;
+	background-color: blue;
 }
+
 .fit-image{
-width: 100%;
-object-fit: cover;
-height: 300px; /* only if you want fixed height */
+	width: 100%;
+	object-fit: cover;
+	height: 300px; /* only if you want fixed height */
 }
 
-p{
- color:red;
- font-family: Perpetua, serif;
+.content{
+	margin-left:0px;
+	padding:20px;
 }
 
-#nav-placeholder .navbar{
-   width: 100%; //fallback
-   width: 100vw;
+.wrapper {
+    display: block;
+	
+	margin-left:250px;
+	height:100%;
+	width:100%;
+}
+
+
+
+#sidebar  {
+    position: fixed;
+    top: 0;
+    left: 0;   
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+	z-index: 1000; /* Sit on top */ 
+	width: 250px;    
+    left: 0;
+	height: 100vh;
+}
+
+
+
+.navButton{
+    display: none;
+  }
+  
+.mobileNav{
+	text-align:center;
+}
+
+.mobileNav a:link, .mobileNav a:visited{
+		color:blue;
+	}
+
+
+/* The Modal (background) */
+.merrModal {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none; /* Hidden by default */
+	z-index: 1000; /* Sit on top */ 	
+}
+
+#modalImage{
+	min-height:300px;
+	max-height:1000px;
+	height:100%;
+}
+
+.modal-content {
+	color:black;	
+	padding: 20px;  
+	border: 1px solid #888;
+}
+
+#modalTitle{
+	font-weight: bold;
+	text-align:center;
+}
+
+.close {
+	position:fixed;
+	color: #aaa;
+	top: 5px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.modalbtn{
+	cursor: pointer;
+
+}
+#meerCarousel{
+	display:none;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#showNav, #hideNav{
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+}
+
+.sidebarContent a:link,.sidebarContent  a:visited{
+		color:white;
+		
+	}
+	
+
+
+@media screen and (max-width: 900px) {
+	
+	#sidebar {
+		height:40px;
+		width:100%;
+		text-align:center;
+	}
+	.headingRow{
+		text-align:center;
+	}
+	
+	#showNav{
+		display:block;
+	}
+	
+	.merrModal {
+		left: 0%;
+		transform: translate(0%, -50%);
+	}
+	
+
+	.wrapper {
+		margin-left: 0;		
+		margin-top:40px;	
+	}
+	
+	.content{	
+		margin:auto;	
+		width:100%;		
+	}
+	
+	.sidebarContent{
+		display:none;
+		
+
+	}
+	
+}
+
+@media screen and (min-width: 900px) {
+	.mobileNav{
+		display:none
+	}
+	#sidebar {
+		display:block;
+	}
+	.sidebarContent, .sidebar-header{
+		margin-left:2px;
+	}
 }
