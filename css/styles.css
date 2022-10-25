@@ -21,7 +21,10 @@
 
 .content{
 	margin-left:0px;
-	padding:20px;
+}
+
+#contentHeader{
+	padding-top:10px;
 }
 
 .wrapper {
@@ -173,6 +176,7 @@
 	}
 	#sidebar {
 		display:block;
+		
 	}
 	.sidebarContent, .sidebar-header{
 		margin-left:2px;
