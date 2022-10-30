@@ -132,6 +132,7 @@
 		height:40px;
 		width:100%;
 		text-align:center;
+		
 	}
 	.headingRow{
 		text-align:center;
@@ -166,6 +167,9 @@
 		display:none;
 		
 
+	}
+	.contactLinks{
+		text-align:center;
 	}
 	
 }
